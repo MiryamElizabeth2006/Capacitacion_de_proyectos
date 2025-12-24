@@ -1,4 +1,4 @@
-import {
+/*import {
   Controller,
   Get,
   Post,
@@ -50,3 +50,13 @@ export class AppController {
     return this.appService.deleteUser(Number(id));
   }
 }
+@Controller ('info')
+export class InfoController {
+  constructor(private readonly appService: AppService) {}
+
+  // GET /info
+  @Get()
+  getInfo() {
+    return this.appService.getInfo();
+  }
+}*/

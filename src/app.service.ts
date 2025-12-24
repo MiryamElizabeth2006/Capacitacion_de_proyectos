@@ -1,4 +1,4 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import { Injectable, NotFoundException} from '@nestjs/common';
 
 /*@Injectable()
 export class AppService {
@@ -18,7 +18,7 @@ export class AppService {
 
   addMessage(message: string): string{
     return 'Mensaje agregado correctamente'
-  }*/
+  }8888888
 
   export interface User {
     id: number
@@ -26,16 +26,32 @@ export class AppService {
     email: string
   }
 
+  export interface Info {
+    id: number
+    telefono: string
+    dirección: string
+  }
+
   @Injectable()
   export class AppService {
     private users: User[] = [
       {id: 1, name: 'Johny', email: 'john@example.com'},
       {id: 2, name: 'Lucia', email: 'lucy@example.com'}
-    ]
+    ];
+
+    private info : Info[] = [
+      {id:1, telefono: '123-456-7890', dirección: '123 Main St, City, Country'},
+      {id:2, telefono: '987-654-3210', dirección: '456 Elm St, City, Country'}
+      ]
 
     //Get users
     getUsers(): User[]{
       return this.users
+    }
+
+    //GET info
+    getInfo(): Info[]{
+       return this.info
     }
 
     //GET /users/id
@@ -75,4 +91,4 @@ export class AppService {
     this.users.splice(index, 1);
     return 'Usuario eliminado correctamente';
   }
-}
+}*/
