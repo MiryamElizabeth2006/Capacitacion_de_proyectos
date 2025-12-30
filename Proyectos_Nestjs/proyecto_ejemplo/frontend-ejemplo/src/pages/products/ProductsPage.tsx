@@ -18,7 +18,7 @@ export default function ProductPage() {
     },[])
 
     const handleDelete = async (id: number) => {
-        if(confirm('¿Eliminar usuario?')){
+        if(confirm('¿Estás seguro de eliminar este producto?')){
             await deleteProduct(id)
             loadProduct()
         }

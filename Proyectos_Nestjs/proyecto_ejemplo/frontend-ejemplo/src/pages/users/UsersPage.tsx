@@ -18,7 +18,7 @@ export default function UsersPage() {
   }, []);
 
   const handleDelete = async (id: number) => {
-    if (confirm("¿Eliminar usuario?")) {
+    if (confirm("¿Estás seguro de eliminar el usuario?")) {
       await deleteUser(id);
       loadUsers();
     }
